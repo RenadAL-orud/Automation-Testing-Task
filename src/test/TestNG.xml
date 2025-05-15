@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Mobile_ API  Test Suite">
+    <!-- Test Group for mobile  -->
+    <test name="mobile Tests">
+        <parameter name="deviceName" value="renad"/>
+
+        <groups>
+            <run>
+                <include name="mobile"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Appium.TestCase.TC_Login"/>
+            <class name="Appium.TestCase.TC_Logout"/>
+            <class name="Appium.TestCase.TC_Productpage"/>
+        </classes>
+    </test>
+    <!-- Test API  -->
+    <test name="API Tests">
+        <parameter name="deviceName" value="renad"/>
+
+        <groups>
+            <run>
+                <include name="APIRestAssured"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="RestAssuredAPI.CreateUser"/>
+            <class name="RestAssuredAPI.GetSingleUser"/>
+            <class name="RestAssuredAPI.UpdateUser"/>
+            <class name="RestAssuredAPI.Negativetest"/>
+        </classes>
+    </test>
+
+
+</suite>
